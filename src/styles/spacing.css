@@ -6,3 +6,39 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
 }
+
+dl {
+  font-size: 1rem;
+  border: 1px solid #ccc; /* bordo per il dl */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* tre colonne di uguale larghezza */
+  gap: var(--spacing-md); /* spazio tra le colonne */
+  padding: var(--spacing-md); /* padding interno */
+  margin: var(--spacing-lg); /* margine esterno */
+  background-color: #f9f9f9; /* colore di sfondo per il dl */
+  border-radius: 8px; /* angoli arrotondati */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ombra per dare profondità */
+}
+dt {
+  font-weight: 600;
+  padding: var(--spacing-sm) var(--spacing-md); /* padding per il dt */
+  border-bottom: 1px solid #ccc;
+}
+
+dd {
+  padding: var(--spacing-sm) var(--spacing-md); /* padding per il dd */
+  border-bottom: 1px solid #ccc; /* bordo inferiore per separare le righe */
+  font-family: monospace; /* font a larghezza fissa per il valore */
+  display: grid; /* utilizzo di grid per il dd */
+  gap: 1ch; /* spazio tra colonne */
+  grid-template-columns: subgrid; /* utilizzo di subgrid per ereditare le colonne dal dl */
+  grid-column: 2/4; /* occupa le colonne 2 e 3 della grid padre */
+  align-items: center;
+}
+
+.info {
+  background: salmon;
+  height: 1rem;
+  width: var(--story-spacing); /* larghezza dinamica dalla variabile CSS */
+  display: block;
+}
